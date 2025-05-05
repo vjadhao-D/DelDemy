@@ -21,8 +21,8 @@ function HomeScreen({navigation}) {
   }, [isFocused]);
 
   return (
-    <SafeAreaView style={{flex: 1, padding: '5%'}}>
-      <Text style={styles.title}>Courses</Text>
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.title}>Explore Our Courses</Text>
       <FlatList
         data={courses}
         renderItem={({item}) => (
@@ -32,7 +32,7 @@ function HomeScreen({navigation}) {
           />
         )}
         keyExtractor={(item, index) => `${item.id}-${index}`}
-        contentContainerStyle={{paddingBottom: 20}}
+        contentContainerStyle={styles.listContent}
         showsVerticalScrollIndicator={false}
       />
     </SafeAreaView>
@@ -40,12 +40,20 @@ function HomeScreen({navigation}) {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: '1%',
+    backgroundColor: '#f5f5f5',
+  },
   title: {
-    fontSize: 30,
+    fontSize: 32,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginBottom: 20,
-    color: '#000000',
+    marginBottom: 10,
+    color: '#333333',
+  },
+  listContent: {
+    paddingBottom: 1,
   },
 });
 

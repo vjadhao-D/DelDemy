@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 
 import {Button, View, SafeAreaView, StyleSheet} from 'react-native';
 import {CartContextProvider} from './src/ContextProvider/CartContextProvider';
@@ -7,6 +7,7 @@ import AppNavigation from './src/appNavigation/AppNavigation';
 
 
 function App() {
+
   return (
     <AuthContextProvider>
       <CartContextProvider>
